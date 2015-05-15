@@ -1,0 +1,23 @@
+
+
+/* Mixin */
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Example @include */
+.element p {
+  @include vertical-align;
+}
+
+
+/* Use when you want to have a line of text with ellipsis */
+@mixin text-one-line-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,47 @@
+/*
+ * site-nav: the different looks of the navigation bar
+ */
+.site-nav {
+  z-index: $zIndex-7-site-nav;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  padding-top: 50px;
+  background-color: #333;
+  color: #888;
+}
+
+/* This is an link item */
+.site-nav__link {
+  min-height: 50px;
+  height: calc(100% / 7);
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+  // transition: width .3s, background .3s;
+
+  &:hover {
+    background-color: #aaa;
+    color: #555;
+    // width: 250px;
+  }
+}
+
+.site-nav__wrapper {
+  @include vertical-align;
+}
+
+.site-nav__icon {
+
+}
+
+.site-nav__name {
+  display: none;
+  font-size: $body-small;
+  line-height: 1;
+  font-weight: 100;
+}
+
+/* END OF SITE-NAV */

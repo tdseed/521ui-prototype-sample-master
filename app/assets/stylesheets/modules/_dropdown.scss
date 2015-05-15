@@ -1,0 +1,68 @@
+/*
+ * dropdown
+ * using "dropdown-button" to distinguish it from bootstrap
+ *
+ * usage:
+ * content-block
+ *   content-block__item.width-250px.height-40px.dropdown-button
+ */
+
+.dropdown-button {
+  position: relative;
+  cursor: pointer;
+  z-index: $zIndex-2-dropdown-button-menu;
+
+  &:hover { /* These create persistent hover states, meaning the top-most link stays 'hovered' even when your cursor has moved down the list. */
+    background-color: #ddd;
+
+    .dropdown-button__menu-wrapper {
+      left: 0;
+    }
+  }
+}
+
+/* the down arrow that appears on the button. Use fa-chevron-down */
+.dropdown-button__icon {
+  padding-top: 2px;
+}
+
+/*
+ * Menu Wrapper to push the button menu down
+ */
+.dropdown-button__menu-wrapper {
+    position: absolute;
+    left:-9999px; /* Hide off-screen when not needed (this is more accessible than display:none;) */
+    padding-top: 15px;
+}
+
+.dropdown-button__menu {
+  z-index: $zIndex-2-dropdown-button-menu;
+  background: #fff; /* Adding a background makes the dropdown work properly in IE7+. Make this as close to your page's background as possible (i.e. white page == white background). */
+  background: rgba(255,255,255,0); /* But! Let's make the background fully transparent where we can, we don't actually want to see it if we can help it... */
+  list-style: none;
+  padding: 0;
+
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.dropdown-button__menu-item {
+  float: none;
+  background: #fff;
+  padding: 5px 15px;
+
+  &:hover {
+    background-color: #ddd;
+    cursor: pointer;
+  }
+}
+
+.dropdown-button__link {
+  white-space: nowrap; /* Stop text wrapping and creating multi-line dropdown items */
+  text-decoration:none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

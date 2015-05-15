@@ -1,0 +1,57 @@
+/*
+ * material-category-nav
+ * layout specifically for the material-category-nav
+ */
+
+
+.material-category-nav {
+  list-style: none;
+}
+
+.material-category-nav__icon {
+  font-size: $h4-size;
+}
+
+.material-category-nav__header {
+  display: inline-block;
+}
+
+.material-category-nav__list {
+  list-style: none;
+  margin-top: 10px;
+  padding-left: 0;
+}
+
+.material-category-nav__item {
+  list-style: none;
+  clear: both;
+  overflow-y: auto;
+  display: table;
+  padding-left: 25px;
+
+  &:nth-child(odd) {
+    background-color: #ddd;
+  }
+
+  &:hover {
+    background-color: #ccc;
+    cursor: pointer;
+  }
+}
+
+.material-category-nav__csi-num {
+  display: table-cell;
+  float: left;
+  font-size: $body-size;
+  padding-right: 5px;
+  width: 1%;
+  vertical-align: bottom;
+}
+
+.material-category-nav__name {
+  display: table-cell; // make sure that it stays to the right of the csi-num
+  font-size: $h5-size;
+  width: 99%;
+  padding: 0;
+  vertical-align: bottom;
+}

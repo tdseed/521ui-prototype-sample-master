@@ -1,0 +1,445 @@
+
+// App Container - everything goes in here.
+.app-container
+
+  // Permanent Header
+  .app-head
+    .app-head__logo.float-left
+    .app-head__page-name.float-left.wrapper
+      h4 Materials Library
+    .user.float-right.wrapper
+      .user__name Stanton Wong
+      .user__pic
+    .app-head__notification.float-right.wrapper
+      i.fa.fa-bell.fa-fw
+
+  // Permanent Left Navigation Bar
+  .site-nav.full-height data-ui-component="navigation-bar"
+    .site-nav__link data-ui-component="dashboard-link"
+      .site-nav__wrapper
+        .site-nav__icon
+          i.fa.fa-dashboard.fa-fw.fa-2x
+        .site-nav__name Dash board
+    .site-nav__link data-ui-component="projects-link"
+      .site-nav__wrapper
+        .site-nav__icon
+          i.fa.fa-building.fa-fw.fa-2x
+        .site-nav__name Projects
+    .site-nav__link data-ui-component="materials-library-link"
+      .site-nav__wrapper
+        .site-nav__icon
+          i.fa.fa-cubes.fa-fw.fa-2x
+        .site-nav__name Materials Library
+    .site-nav__link data-ui-component="vendors-library-link"
+      .site-nav__wrapper
+        .site-nav__icon
+          i.fa.fa-tty.fa-fw.fa-2x
+        .site-nav__name Vendors Library
+    .site-nav__link data-ui-component="standards-link"
+      .site-nav__wrapper
+        .site-nav__icon
+          i.fa.fa-book.fa-fw.fa-2x
+        .site-nav__name Standards
+    .site-nav__link data-ui-component="files-library-link"
+      .site-nav__wrapper
+        .site-nav__icon
+          i.fa.fa-file-text.fa-fw.fa-2x
+        .site-nav__name Files Library
+    .site-nav__link data-ui-component="settings-link"
+      .site-nav__wrapper
+        .site-nav__icon
+          i.fa.fa-cogs.fa-fw.fa-2x
+        .site-nav__name Settings
+
+
+  .app-body.full-height
+    .app-body__content.full-height data-ui-component="main-content"
+      .wrapper.full-height
+
+        // Search bar and Create New button
+        .content-row.clear-fix.display-table
+          .content-block
+            .button.button--white data-ui-component="back-to-library"
+              i.fa.fa-arrow-left.fa-fw
+          .content-block.display-table-cell.full-width
+            .content-block__item.height-40px
+              i.breadcrumb-row-icon.fa.fa-home.fa-fw.float-left
+              ol.breadcrumb-row
+                li.breadcrumb-row__item
+                  a.breadcrumb-row__link All
+                li.breadcrumb-row__item
+                  a.breadcrumb-row__link Concrete
+                li.breadcrumb-row__item
+                  a.breadcrumb-row__link Something
+                li.breadcrumb-row__item
+                  a.breadcrumb-row__link Else
+          .content-block
+            .button.button--primary data-ui-component="add-to-project"
+              i.fa.fa-plus.fa-fw
+              span Add to Project
+
+
+
+        // Material Brand Logo, Material Name, and Material Brand Name
+        .content-row.clear-fix.display-table
+          // Brand Logo
+          .content-block
+            .content-block__item.brand-logo-thumbnail.brand-logo-thumbnail--no-logo
+              p.brand-logo-thumbnail__text Click to add a brand logo
+          // Material Name, Material Brand Name
+          .content-block.display-table-cell.full-width
+            .content-block__item
+              h1 Marmoleum Flooring
+              h2 by WoodenFloors Inc.
+
+        // Tags
+        .content-row.clear-fix
+          .content-block
+            .content-block__item
+              .labels
+                h5 Tag 1
+              .labels
+                h5 Tag 2
+              .labels
+                h5 Tag 3
+              .button.button--primary.labels.labels--add-button
+                i.fa.fa-plus.fa-fw
+
+        // Images
+        .content-row.clear-fix
+          .content-block
+            .content-block__item.arrow__wrapper
+              // Left and Right Buttons
+              // hide if there are now enough images to take up the row.
+
+              // left button - don't use fa-fw here
+              .button.arrow__container.arrow__container--left
+                i.fa.fa-angle-left.arrow__arrow__icon
+              // right button - don't use fa-fw here
+              .button.arrow__container.arrow__container--right
+                i.fa.fa-angle-right.arrow__icon
+              // add image button
+              .button.material-images__image.material-images__image--add-image
+                h3 Drag and Drop or click to add an image
+
+        // Material Product Description
+        .content-row.clear-fix
+          .content-block.full-width
+            .content-block__item
+              .wrapper
+                // Content Block Edit Button
+                .button.button--small.button--primary.content-block__edit-button.float-right
+                  i.fa.fa-edit.fa-fw
+                  span Edit
+                // Header
+                h3.content-block__header Product Description
+
+
+                p Some block of text that is like lorem ipsum but not.
+
+        // Material Specs
+        .content-row.clear-fix
+          .content-block.full-width
+            .content-block__item
+              .wrapper
+                // Content Block Edit Button
+                .button.button--small.button--primary.content-block__edit-button.float-right
+                  i.fa.fa-edit.fa-fw
+                  span Edit
+                // Header
+                h3.content-block__header Specifications
+
+                h5 BASIC INFORMATION
+                .specifications-table
+                  .specifications-table__row
+                    / Must use span for display: inline
+                    span.specifications-table__cell-initial-tab
+                    span.specifications-table__cell-key Product Code
+                    span.specifications-table__cell-value 1099283-IHAAC
+                  .specifications-table__row
+                    span.specifications-table__cell-initial-tab
+                    span.specifications-table__cell-key CSI Category
+                    span.specifications-table__cell-value 1099283-IHAAC
+                  .specifications-table__row
+                    span.specifications-table__cell-initial-tab
+                    span.specifications-table__cell-key Made In
+                    span.specifications-table__cell-value 1099283-IHAAC
+                  .specifications-table__row
+                    span.specifications-table__cell-initial-tab
+                    span.specifications-table__cell-key List Price
+                    span.specifications-table__cell-value 1099283-IHAAC
+
+                h5 PHYSICAL PROPERTIES
+                .specifications-table
+                  .specifications-table__row
+                    / Must use span for display: inline
+                    span.specifications-table__cell-initial-tab
+                    span.specifications-table__cell-key Dimensions
+                    span.specifications-table__cell-value 1099283-IHAAC
+                  .specifications-table__row
+                    span.specifications-table__cell-initial-tab
+                    span.specifications-table__cell-key Material Composition
+                    span.specifications-table__cell-value 1099283-IHAAC
+                  .specifications-table__row
+                    span.specifications-table__cell-initial-tab
+                    span.specifications-table__cell-key Colour
+                    span.specifications-table__cell-value 1099283-IHAAC
+                  .specifications-table__row
+                    span.specifications-table__cell-initial-tab
+                    span.specifications-table__cell-key Weight
+                    span.specifications-table__cell-value 1099283-IHAAC
+                  .specifications-table__row
+                    span.specifications-table__cell-initial-tab
+                    span.specifications-table__cell-key Warranty
+                    span.specifications-table__cell-value 1099283-IHAAC
+
+                h5 PERFORMANCE
+                .specifications-table
+                  .specifications-table__row
+                    / Must use span for display: inline
+                    span.specifications-table__cell-initial-tab
+                    span.specifications-table__cell-key Flammability Rating
+                    span.specifications-table__cell-value something
+                  .specifications-table__row
+                    span.specifications-table__cell-initial-tab
+                    span.specifications-table__cell-key Porosity
+                    span.specifications-table__cell-value something
+                  .specifications-table__row
+                    span.specifications-table__cell-initial-tab
+                    span.specifications-table__cell-key Chemical Resistance
+                    span.specifications-table__cell-value something
+                  .specifications-table__row
+                    span.specifications-table__cell-initial-tab
+                    span.specifications-table__cell-key VOC Emissions
+                    span.specifications-table__cell-value something
+
+        // Material Specs EDIT MODE
+        .content-row.clear-fix
+          .content-block.full-width
+            // Activate Specifications EDIT MODE here
+            .content-block__item.specifications--edit-mode
+              .wrapper
+                // Content Block Edit Button - HIDE WHEN IN EDIT MODE
+                .button.button--small.button--primary.content-block__edit-button.float-right
+                  i.fa.fa-edit.fa-fw
+                  span Edit
+                // Header
+                h3.content-block__header Edit Specifications
+
+                h5 BASIC INFORMATION
+                .specifications-table
+                  .specifications-table__row
+                    / Must use span for display: inline
+                    span.specifications-table__cell-initial-tab
+                    span.specifications-table__cell-key Product Code
+                    span.specifications-table__cell-value 1099283-IHAAC
+                  .specifications-table__row
+                    span.specifications-table__cell-initial-tab
+                    span.specifications-table__cell-key CSI Category
+                    span.specifications-table__cell-value 1099283-IHAAC
+                  .specifications-table__row
+                    span.specifications-table__cell-initial-tab
+                    span.specifications-table__cell-key Made In
+                    span.specifications-table__cell-value 1099283-IHAAC
+                  .specifications-table__row
+                    span.specifications-table__cell-initial-tab
+                    span.specifications-table__cell-key List Price
+                    span.specifications-table__cell-value 1099283-IHAAC
+                  .specifications-table__row
+                    span.specifications-table__cell-initial-tab
+                    span.specifications-table__cell-add-row Click to Add more Information
+                    span.specifications-table__cell-value
+
+                h5 PHYSICAL PROPERTIES
+                .specifications-table
+                  .specifications-table__row
+                    / Must use span for display: inline
+                    span.specifications-table__cell-initial-tab
+                    span.specifications-table__cell-key Dimensions
+                    span.specifications-table__cell-value 1099283-IHAAC
+                  .specifications-table__row
+                    span.specifications-table__cell-initial-tab
+                    span.specifications-table__cell-key Material Composition
+                    span.specifications-table__cell-value 1099283-IHAAC
+                  .specifications-table__row
+                    span.specifications-table__cell-initial-tab
+                    span.specifications-table__cell-key Colour
+                    span.specifications-table__cell-value 1099283-IHAAC
+                  .specifications-table__row
+                    span.specifications-table__cell-initial-tab
+                    span.specifications-table__cell-key Weight
+                    span.specifications-table__cell-value 1099283-IHAAC
+                  .specifications-table__row
+                    span.specifications-table__cell-initial-tab
+                    span.specifications-table__cell-key Warranty
+                    span.specifications-table__cell-value 1099283-IHAA
+                  .specifications-table__row
+                    span.specifications-table__cell-initial-tab
+                    span.specifications-table__cell-add-row Click to Add more Information
+                    span.specifications-table__cell-value
+
+                h5 PERFORMANCE
+                .specifications-table
+                  .specifications-table__row
+                    / Must use span for display: inline
+                    span.specifications-table__cell-initial-tab
+                    span.specifications-table__cell-key.text-black Flammability Rating
+                    span.specifications-table__cell-value.text-black-secondary Add Flamibility Rating
+                  .specifications-table__row
+                    span.specifications-table__cell-initial-tab
+                    span.specifications-table__cell-key Porosity
+                    input.specifications-table__cell-value
+                  .specifications-table__row
+                    span.specifications-table__cell-initial-tab
+                    span.specifications-table__cell-key Chemical Resistance
+                    span.specifications-table__cell-value
+                  .specifications-table__row
+                    span.specifications-table__cell-initial-tab
+                    span.specifications-table__cell-key VOC Emissions
+                    span.specifications-table__cell-value
+                  .specifications-table__row
+                    span.specifications-table__cell-initial-tab
+                    span.specifications-table__cell-add-row Click to Add more Information
+                    span.specifications-table__cell-value
+
+                .save-and-cancel.float-right
+                  a.save-and-cancel__link SAVE
+                  a.save-and-cancel__link CANCEL
+
+
+        // Projects this material is used in (Show only when it's being used)
+        // NO EDIT BUTTON
+        .content-row.clear-fix
+          .content-block.full-width
+            .content-block__item
+              .wrapper
+                // Header
+                h3.content-block__header Projects this Material is Used In
+                div
+                  a Vidal Sasson Academy at Red Town
+                div
+                  a URBN Hotel
+                div
+                  a Suzhou Summit
+
+        // Material Certifications
+        .content-row.clear-fix
+          .content-block.full-width
+            .content-block__item
+              .wrapper
+                // Content Block Edit Button - HIDE WHEN IN EDIT MODE
+                .button.button--small.button--primary.content-block__edit-button.float-right
+                  i.fa.fa-edit.fa-fw
+                  span Edit
+                .button.button--small.button--primary.content-block__edit-button.float-right
+                  i.fa.fa-plus.fa-fw
+                  span Add
+                // Header
+                h3.content-block__header Material Certifications
+                p This product currently has no Material Certifications.
+
+        // Technical Documents
+        .content-row.clear-fix
+          .content-block.full-width
+            .content-block__item
+              .wrapper
+                // Content Block Button(s) - HIDE WHEN IN EDIT MODE
+                // EDIT BUTTON
+                .button.button--small.button--primary.content-block__edit-button.float-right
+                  i.fa.fa-edit.fa-fw
+                  span Edit
+                // ADD BUTTON
+                .button.button--small.button--primary.content-block__edit-button.float-right
+                  i.fa.fa-plus.fa-fw
+                  span Add
+                // Header
+                h3.content-block__header Technical Documents
+                p There are currently no technical documents.
+
+        // Vendors
+        .content-row.clear-fix
+          .content-block.full-width
+            .content-block__item.arrow__wrapper
+              // left button - don't use fa-fw here
+              .button.arrow__container.arrow__container--left
+                i.fa.fa-angle-left.arrow__arrow__icon
+              // right button - don't use fa-fw here
+              .button.arrow__container.arrow__container--right
+                i.fa.fa-angle-right.arrow__icon
+              // add image button
+              .wrapper
+                // Content Block Edit Button - HIDE WHEN IN EDIT MODE
+                .button.button--small.button--primary.content-block__button.float-right
+                  i.fa.fa-edit.fa-fw
+                  span Edit
+                .button.button--small.button--primary.content-block__button.float-right
+                  i.fa.fa-plus.fa-fw
+                  span Add
+                // Header
+                h3.content-block__header Vendors
+
+                .wrapper
+                  .contact-card
+                    // NOTE: Show the Remove button only in Edit Mode
+                    .button.button--small.button--primary.content-block__button.float-right
+                      i.fa.fa-trash.fa-fw
+                      span Remove
+                    .contact-card__company-name GDK Metals
+                    .contact-card__person-title Regional Sales Manager
+                    .contact-card__person-name Irene Fung
+                    .contact-card__person-email irenefung@gdkchina.com
+                    .contact-card__person-phone 15221200352
+                    .contact-card__company-address 1200 West Nanjing Road, Building A, #1901
+                    .contact-card__company-address-2 Shanghai, Jingan District 200090
+                  .contact-card
+                    // NOTE: Show the Remove button only in Edit Mode
+                    .button.button--small.button--primary.content-block__button.float-right
+                      i.fa.fa-trash.fa-fw
+                      span Remove
+                    .contact-card__company-name.text-disabled No Company Info
+                    .contact-card__person-title.text-disabled No Title Info
+                    .contact-card__person-name No Name Provided
+                    .contact-card__person-email.text-disabled No Email Info
+                    .contact-card__person-phone.text-disabled No Phone Info
+                    .contact-card__company-address.text-disabled No address Info
+                    .contact-card__company-address-2.text-disabled
+
+        // Reviews
+        .content-row.clear-fix
+          .content-block.full-width
+            .content-block__item
+              .wrapper
+                // Header
+                h3.content-block__header Reviews
+                .comment-card.comment-card--create
+                  .comment-card__avatar
+                    .user__pic
+                  .comment-card__comment
+                    .comment-card__stars
+                      span Rate the Material:
+                      i.fa.fa-star-o.fa-fw
+                      i.fa.fa-star-o.fa-fw
+                      i.fa.fa-star-o.fa-fw
+                      i.fa.fa-star-o.fa-fw
+                      i.fa.fa-star-o.fa-fw
+                    .comment-card__text contentEditable="true"
+                    .button.button--small.button--primary.comment-card__submit-button.float-right Submit
+                .comment-card
+                  .comment-card__avatar
+                    .user__pic.float-left
+                  .comment-card__comment
+                    .comment-card__name Stanton Wong
+                    .comment-card__stars
+                      i.fa.fa-star-o.fa-fw
+                      i.fa.fa-star-o.fa-fw
+                      i.fa.fa-star-o.fa-fw
+                      i.fa.fa-star-o.fa-fw
+                      i.fa.fa-star-o.fa-fw
+                    .comment-card__text Something that I wrote. Testing Testing.
+                    // Show minutes ago, hours ago, days ago (up to 2 days), then Date
+                    .comment-card__info
+                      // Show Edit and Delete if it's your own post.
+                      a Edit
+                      a Delete
+                      span March 12th, 2015
+

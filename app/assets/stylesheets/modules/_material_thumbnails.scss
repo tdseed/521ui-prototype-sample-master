@@ -1,0 +1,61 @@
+/*
+ * Material Thumbnail CSS
+ */
+
+.material-thumbnail {
+  display: inline-block;
+  height: 195px;
+  width: 200px;
+  margin: 5px;
+  background-color: #999;
+  border: 1px solid #555;
+  vertical-align: top;
+}
+
+/* the header is specifically used for displaying the category of the material */
+.material-thumbnail__header {
+  height: 20px;
+  background-color: #555;
+  color: white;
+  font-size: $body-size;
+  padding: 1px 5px;
+}
+
+/* used with span element for CSI category numbers */
+.material-thumbnail__header-small {
+  color: #ccc;
+}
+
+.material-thumbnail__img {
+  height: 125px;
+  width: 100%;
+}
+
+/* specifically for displaying the "no image provided" note */
+.material-thumbnail__img-note {
+  font-size: $h4-size;
+  color: #777;
+  padding: 35px 5px;
+  display: block;
+}
+
+.material-thumbnail__text-container {
+  height: 48px; /* because of the border */
+  width: 100%;
+  background-color: #FFF;
+  padding: 3px 5px;
+}
+
+.material-thumbnail__text-main {
+  display: block;
+  font-size: $h4-size;
+  color: #777;
+  @include text-one-line-ellipsis;
+}
+
+.material-thumbnail__text-secondary {
+  display: block;
+  margin-top: -4px; /* minimize the space between main and secondary for aesthetics */
+  font-size: $h5-size;
+  @include text-one-line-ellipsis;
+}

@@ -1,0 +1,36 @@
+/*
+ * Z-Index Variables
+ *
+ * Usage:
+ * Every time we use a zIndex, name exactly where the application is in
+ * Z-Index Applications.
+ * Then choose a zIndex from the Z-Index Scale.
+ * This way, we keep Z-Index very clean and easy to find.
+ */
+
+
+// Z-Index Scale (private vars)
+// --------------------------------------------------
+$zIndex-1:   100;
+$zIndex-2:   200;
+$zIndex-3:   300;
+$zIndex-4:   400;
+$zIndex-5:   500;
+$zIndex-6:   600;
+$zIndex-7:   700;
+$zIndex-8:   800;
+$zIndex-9:   900;
+$zIndex-10: 1000;
+
+// Modals in Bootstrap are set in the 1000-1100 range.
+// Anything that needs to appear above modals should be set above.
+
+
+// Z-Index Applications
+// --------------------------------------------------
+
+$zIndex-2-dropdown-button-menu: $zIndex-2;
+
+$zIndex-7-site-nav:             $zIndex-7;
+
+$zIndex-8-app-header:           $zIndex-8;

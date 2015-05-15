@@ -1,0 +1,36 @@
+/*
+ * breadcrumb-row
+ * using "breadcrumb-row" name so it does not clash with Bootstrap's breadcrumb
+ *
+ * usage:
+ * breadcrumb
+ *   ol
+ *     li.breadcrumb-row__item
+ *     li.breadcrumb-row__item
+ */
+
+.breadcrumb-row {
+  list-style: none;
+  margin: 0; /* to cancel out Bootstrap */
+  padding: 0;
+}
+
+/* for i class="fa fa-home fa-fw" */
+.breadcrumb-row-icon {
+  padding: 1px;
+  font-size: 18px;
+}
+
+.breadcrumb-row__item {
+  display:inline-block;
+
+  &:before {
+    padding: 0 5px;
+    color: #ccc;
+    content: "/\00a0";
+  }
+}
+
+.breadcrumb-row__link {
+
+}

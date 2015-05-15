@@ -1,0 +1,95 @@
+.app-container {
+  height:100%;
+  min-height: 100%;
+  min-width: $app-min-width;
+}
+
+/*
+ * app-head: the permanent fixed header at the top of the page
+ */
+.app-head {
+  z-index: $zIndex-8-app-header;
+  position: fixed;
+  top: 0;
+  height: 50px;
+  width: 100%;
+  min-width: $app-min-width;
+  background-color: #FFFFFF;
+}
+
+.app-head__logo {
+  float: left;
+  height: 50px;
+  width: 50px;
+}
+
+.app-head__page-name {
+  margin:0;
+  @include vertical-align;
+}
+
+.app-head__notification {
+  @include vertical-align;
+}
+
+.user {
+  @include vertical-align;
+}
+
+.user__pic {
+  display:inline-block;
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  background-color: #CCCCCC;
+  vertical-align: middle;
+}
+
+.user__name {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* END OF APP-HEAD */
+
+
+
+
+/*
+ * app-body: body related layout. 50px padding for the height of the top bar
+ */
+.app-body {
+  min-height: 100%;
+  padding-top: 50px;
+  padding-left: 50px;
+}
+
+.app-body__content {
+  padding-top: 10px;
+}
+
+.app-body__2-column-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+/* used to contain a vertical of 250px wide content-blocks */
+.app-body__2-column-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 270px;
+}
+
+/* used to contain a vertical of 250px wide content-blocks */
+.app-body__2-column-right {
+  height: 100%;
+  width: 100%;
+  padding-left: 270px;
+}
+
+/* END OF APP-BODY */
+
+

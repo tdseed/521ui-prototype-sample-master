@@ -1,0 +1,9 @@
+doctype html
+html.full-height
+  head
+    title Slim Examples
+    = stylesheet_link_tag 'application', media: 'all'
+    = csrf_meta_tags
+  body.full-height.colored-background
+    == yield
+    = javascript_include_tag 'application'

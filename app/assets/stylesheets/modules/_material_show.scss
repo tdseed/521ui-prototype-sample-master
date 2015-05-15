@@ -1,0 +1,258 @@
+
+/*
+ * brand-logo
+ *
+ */
+
+.brand-logo-thumbnail {
+  overflow: hidden;
+  height: 90px;
+  width: 90px;
+  background-color: $color-black-disabled;
+  border: 2px dashed $color-black-text;
+  padding-top:7px;
+}
+
+/* when there is no logo yet */
+.brand-logo-thumbnail--no-logo {
+  cursor: pointer;
+}
+
+/* specifically for the text used for inviting a user to add text */
+.brand-logo-thumbnail__text {
+
+}
+
+
+/*
+ * Left and Right Arrows
+ */
+
+.arrow__wrapper {
+  position: relative; /* for the position absolute left and right arrows */
+}
+
+.arrow__container {
+  position: absolute;
+  height: 36px;
+  width: 36px;
+  top: 50%;
+  margin-top: -18px;
+  padding: 5px;
+  border-radius: 0;
+  background-color: $color-white-secondary;
+  color: $color-black-secondary;
+
+  &:hover {
+    background-color: $color-white;
+    color: $color-black;
+  }
+}
+
+.arrow__container--left {
+  left: 0;
+}
+
+.arrow__container--right {
+  right: 0;
+}
+
+.arrow__icon {
+  font-size: $h3-size;
+}
+
+
+/*
+ * material-images for the material show page
+ *
+ */
+
+.material-images__image {
+  height: 230px;
+  width: 100%;
+}
+
+.material-images__image--add-image {
+  display: table-cell;
+  margin: 5px;
+  height: 220px;
+  width: 220px;
+  border: 2px dashed $color-black-dividers;
+  color: $color-black-dividers;
+  padding: 20px;
+  white-space: normal;
+
+  &:hover {
+    background-color: $color-black-dividers;
+    border: 2px dashed $color-black-disabled;
+    color: $color-black-disabled;
+    cursor: pointer;
+  }
+}
+
+/*
+ * Specifications Table
+ *
+ */
+
+/* Changes when in edit mode */
+.specifications--edit-mode {
+  border: 2px dashed $color-accent;
+
+  .specifications-table__cell-value {
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+.specifications-header {
+  text-transform: uppercase;
+}
+
+.specifications-table {
+  display: table;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.specifications-table__row {
+  display: table-row;
+
+  &:nth-child(odd) {
+    background-color: $color-black-dividers;
+  }
+}
+
+/* add left tab */
+.specifications-table__cell-initial-tab {
+  display: table-cell;
+  width: 10%;
+}
+
+/* This is where the key for a specifications is displayed */
+.specifications-table__cell-key {
+  display: table-cell;
+  width: 30%;
+  padding: 1px;
+  color: $color-black-secondary;
+}
+
+/* This is where the value for a specification is displayed */
+.specifications-table__cell-value {
+  display: table-cell;
+  width: 100%;
+  padding: 1px;
+  color: $color-black-text;
+  outline: none; /* for input during edit */
+}
+
+/* should only appear during edit-mode */
+.specifications-table__cell-add-row {
+  color: $color-accent;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+/*
+ * Contact Card
+ */
+
+.contact-card {
+  overflow: hidden;
+  display: inline-block;
+  height: 170px;
+  width: 290px;
+  border: 2px solid $color-black-dividers;
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 10px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.contact-card__company-name {
+  font-size: $h4-size;
+}
+
+.contact-card__person-title {
+  margin-top: -2px;
+}
+
+.contact-card__person-name {
+  font-size: $h3-size;
+  color: $color-accent;
+  margin-top: 15px;
+}
+
+.contact-card__person-email,
+.contact-card__person-phone,
+.contact-card__company-address,
+.contact-card__company-address-2 {
+  font-size: $body-small;
+  @include text-one-line-ellipsis;
+}
+
+
+/*
+ * Comment Cards
+ */
+
+.comment-card {
+  display: table;
+  margin-bottom: 10px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.comment-card--create {
+  border: 1px solid $color-black-dividers;
+
+  .comment-card__text {
+    border: 1px solid $color-black-disabled;
+    outline: none;
+    margin-bottom: 5px;
+    padding: 5px;
+    min-height: 50px;
+
+    &:focus {
+      border: 1px solid $color-accent;
+    }
+  }
+}
+
+/* left section of comment */
+.comment-card__avatar {
+  display: table-cell;
+  width: 1%;
+  padding: 5px;
+  text-align: right;
+  vertical-align: top;
+}
+
+/* rest of the comment on the right */
+.comment-card__comment {
+  display: table-cell;
+  width: 100%;
+  padding: 5px;
+  vertical-align: top;
+}
+
+.comment-card__name {
+  color: $color-accent;
+}
+
+.comment-card__text {
+  width: 100%;
+}
+
+.comment-card__info {
+  margin-top: 3px;
+  font-size: $body-small;
+}

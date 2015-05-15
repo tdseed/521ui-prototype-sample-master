@@ -1,0 +1,82 @@
+// Global Giga Variables
+// --------------------------------------------------
+
+// Min-width
+$app-min-width:1024px;
+
+// Global Height
+$giga-toolbar-height:40px;
+
+// For Materials Module
+$material-side-nav-width:270px;
+
+
+// Colors
+// --------------------------------------------------
+
+/* Black Text on Light Backgrounds */
+$color-black:             rgba(0,0,0,1);
+$color-black-text:        rgba(0,0,0,.87); /* Text */
+$color-black-secondary:   rgba(0,0,0,.54); /* Secondary Text / Icons */
+$color-black-disabled:    rgba(0,0,0,.26); /* Disabled / Hint Text */
+$color-black-dividers:    rgba(0,0,0,.12); /* Dividers */
+
+/* White Text on Dark Backgrounds */
+$color-white:             rgba(255,255,255,1);
+$color-white-text:        rgba(255,255,255,1); /* Text */
+$color-white-secondary:   rgba(255,255,255,.70); /* Secondary Text / Icons */
+$color-white-disabled:    rgba(255,255,255,.30); /* Disabled / Hint Text */
+$color-white-dividers:    rgba(255,255,255,.12); /* Dividers */
+
+/* Accent Colors */
+$color-accent:            #2979FF; /* Blue A400 */
+$color-accent-light:      #448AFF; /* Blue A200 */
+$color-accent-dark:       #2962FF; /* blue A600 */
+
+/* Dark Grey Colors */
+$color-grey:              #424242; /* GreyDark 800 */
+$color-grey-light:        #BDBDBD; /* GreyDark 400 */
+$color-grey-dark:         #212121; /* GreyDark 900 */
+
+/* White Background 90% Opacity */
+$white-background-90:     rgba(255,255,255,.90);
+
+/*
+ * OLD VARS
+ */
+$normal-text-color-dark:  #555;
+$normal-text-color-dark-h:#999;
+$normal-text-color-light: #fff;
+
+$white-background:        #fff;
+
+$giga-colorg:             #8cc63f;
+$giga-colorg-light:       #a6db34;
+
+$grey:#d1d1d1;
+$grey-light:#F7F7F7;
+$grey-dark:#8E8E8E;
+
+$danger-red:#c7254e;
+
+$select2BorderColor:#d9d9d9;
+$iconNormalColor:#646869;
+
+
+// Font-sizes Generic
+// --------------------------------------------------
+/*
+  Typical rules:
+  body = 1em
+  h1 = 3em
+  h2 = 2.25em
+  h3 = 1.75em
+  h4 = 1.125em
+*/
+$body-small: 10px;
+$body-size: 13px;
+$h1-size: 36px;
+$h2-size: 30px;
+$h3-size: 24px;
+$h4-size: 18px;
+$h5-size: 14px;

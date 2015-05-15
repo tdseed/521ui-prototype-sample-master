@@ -1,0 +1,172 @@
+material_thumbnail.html.slim
+
+
+
+// App Container - everything goes in here.
+.app-container
+
+  // Permanent Header
+  .app-head
+    .app-head__logo.float-left
+    .app-head__page-name.float-left.wrapper
+      h4 Materials Library
+    .user.float-right.wrapper
+      .user__name Stanton Wong
+      .user__pic
+    .app-head__notification.float-right.wrapper
+      i.fa.fa-bell.fa-fw
+
+  // Permanent Left Navigation Bar
+  .site-nav.full-height data-ui-component="navigation-bar"
+    .site-nav__link data-ui-component="dashboard-link"
+      .site-nav__wrapper
+        .site-nav__icon
+          i.fa.fa-dashboard.fa-fw.fa-2x
+        .site-nav__name Dash board
+    .site-nav__link data-ui-component="projects-link"
+      .site-nav__wrapper
+        .site-nav__icon
+          i.fa.fa-building.fa-fw.fa-2x
+        .site-nav__name Projects
+    .site-nav__link data-ui-component="materials-library-link"
+      .site-nav__wrapper
+        .site-nav__icon
+          i.fa.fa-cubes.fa-fw.fa-2x
+        .site-nav__name Materials Library
+    .site-nav__link data-ui-component="vendors-library-link"
+      .site-nav__wrapper
+        .site-nav__icon
+          i.fa.fa-tty.fa-fw.fa-2x
+        .site-nav__name Vendors Library
+    .site-nav__link data-ui-component="standards-link"
+      .site-nav__wrapper
+        .site-nav__icon
+          i.fa.fa-book.fa-fw.fa-2x
+        .site-nav__name Standards
+    .site-nav__link data-ui-component="files-library-link"
+      .site-nav__wrapper
+        .site-nav__icon
+          i.fa.fa-file-text.fa-fw.fa-2x
+        .site-nav__name Files Library
+    .site-nav__link data-ui-component="settings-link"
+      .site-nav__wrapper
+        .site-nav__icon
+          i.fa.fa-cogs.fa-fw.fa-2x
+        .site-nav__name Settings
+
+
+  .app-body.full-height
+    .app-body__content.full-height data-ui-component="main-content"
+      .wrapper.full-height
+        .app-body__2-column-container
+
+          // Left column with 250px width + 10px padding-left and padding-right
+          .app-body__2-column-left.full-height
+
+            // Material Library Selector
+            .content-block
+              .content-block__item.width-250px.height-40px.dropdown-button data-ui-component="material-library-selector"
+                i.fa.fa-chevron-down.fa-fw.float-right.dropdown-button__icon
+                h4 Official Materials
+                .dropdown-button__menu-wrapper
+                  ul.dropdown-button__menu.width-250px
+                    li.dropdown-button__menu-item
+                      a.dropdown-button__link Official Materials
+                    li.dropdown-button__menu-item
+                      a.dropdown-button__link All Materials
+                    li.dropdown-button__menu-item
+                      a.dropdown-button__link GIGABASE Materials
+
+            // Library Category Nav
+            .content-block
+              .content-block__item.width-250px.material-category-nav data-ui-component="material-library-category-nav"
+                i.fa.fa-filter.fa-fw.material-category-nav__icon
+                h4.material-category-nav__header CSI Filters
+                ul.material-category-nav__list
+                  li.material-category-nav__item
+                    span.material-category-nav__csi-num 03
+                    span.material-category-nav__name Concrete
+                  li.material-category-nav__item
+                    span.material-category-nav__csi-num 04
+                    span.material-category-nav__name Masonry
+                  li.material-category-nav__item
+                    span.material-category-nav__csi-num 05
+                    span.material-category-nav__name Metals
+                  li.material-category-nav__item
+                    span.material-category-nav__csi-num 06
+                    span.material-category-nav__name Wood, Plastics, and Composites
+                  li.material-category-nav__item
+                    span.material-category-nav__csi-num 07
+                    span.material-category-nav__name Thermal and Moisture Protection
+
+          .app-body__2-column-right
+            // Search bar and Create New button
+            .content-row.clear-fix
+              .content-block.float-right
+                .button.button--primary data-ui-component="create-new"
+                  i.fa.fa-plus.fa-fw
+                  span Create New
+              .content-block
+                .search-bar data-ui-component="search-bar"
+                  span.search-bar__icon
+                    i.fa.fa-search.fa-fw data-ui-component="search-icon"
+                  input.search-bar__text-input placeholder="Search Term(s)"
+
+            // Breadcrumbs
+            .content-row
+              .content-block
+                .content-block__item.height-40px
+                  i.breadcrumb-row-icon.fa.fa-home.fa-fw.float-left
+                  ol.breadcrumb-row
+                    li.breadcrumb-row__item
+                      a.breadcrumb-row__link All
+                    li.breadcrumb-row__item
+                      a.breadcrumb-row__link Concrete
+                    li.breadcrumb-row__item
+                      a.breadcrumb-row__link Something
+                    li.breadcrumb-row__item
+                      a.breadcrumb-row__link Else
+
+
+            // Material Thumbnails
+            .content-row
+              .content-block
+                .material-thumbnail
+                  .material-thumbnail__header
+                    span.material-thumbnail__header-small 09 10 00
+                    span Flooring
+                  .material-thumbnail__img
+                  .material-thumbnail__text-container
+                    a.material-thumbnail__text-main Valerian
+                    a.material-thumbnail__text-secondary by Imondi
+
+                .material-thumbnail
+                  .material-thumbnail__header
+                    span.material-thumbnail__header-small Uncategorized
+                    span
+                  .material-thumbnail__img
+                  .material-thumbnail__text-container
+                    a.material-thumbnail__text-main Valerian
+                    a.material-thumbnail__text-secondary by Imondi
+
+                .material-thumbnail
+                  .material-thumbnail__header
+                    span.material-thumbnail__header-small Uncategorized
+                    span
+                  .material-thumbnail__img
+                    span.material-thumbnail__img-note No Image <br /> Provided
+                  .material-thumbnail__text-container
+                    a.material-thumbnail__text-main Frame of Reference Collection (100% Wool Carpet)
+                    a.material-thumbnail__text-secondary by Tai Ping Carpets
+
+                .material-thumbnail
+                  .material-thumbnail__header
+                  .material-thumbnail__img
+                  .material-thumbnail__text-container
+                .material-thumbnail
+                  .material-thumbnail__header
+                  .material-thumbnail__img
+                  .material-thumbnail__text-container
+
+
+

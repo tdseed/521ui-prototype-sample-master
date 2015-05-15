@@ -1,0 +1,20 @@
+/*
+ * Labels are anything that looks like a button, but are not.
+ *
+ * i.e. Tags
+ */
+
+.labels {
+  display: inline-block;
+  background-color: $color-grey;
+  color: $color-white;
+  padding: 7px 10px;
+  margin: 0 5px;
+  border-radius: 8px;
+  vertical-align: top;
+}
+
+.labels--add-button {
+  padding: 4px 10px 3px;
+  height: auto;
+}

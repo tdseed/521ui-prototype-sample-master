@@ -1,0 +1,57 @@
+/*------------------------------------*
+    # _base.scss
+    Includes normalize.css, and also sets styles on base elements: html, body,
+    a, ul, li, etc.
+ *------------------------------------*/
+
+/*
+ * Width
+ */
+html,body {
+  min-width: $app-min-width;
+  font-size: 13px;
+}
+
+/*
+ * Text and Headers
+ */
+body,
+h1,h2,h3,h4,h5,h6,
+p {
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  margin:0;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+p {
+  font-size: 13px;
+}
+
+p .small {
+  font-size: 10px;
+}
+
+a {
+  color: $color-accent;
+  cursor: pointer;
+}
