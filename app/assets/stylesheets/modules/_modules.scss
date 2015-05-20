@@ -19,14 +19,42 @@
   float: right;
 }
 
+
+
+
+
+/*
+ * Table via CSS
+ *
+ * reference: http://colintoh.com/blog/display-table-anti-hero
+ */
+
+/* table */
 .display-table {
   display: table;
 }
 
+/* tr */
+.display-tr {
+  display: table-row;
+}
+
+/* td, th   */
 .display-table-cell {
   display: table-cell;
   vertical-align: top;
 }
+
+/* to be used as grids when using table */
+.table-cell-width-25 {
+  width: 25%;
+}
+
+.table-cell-width-20 {
+  width: 20%;
+}
+
+
 
 /*
  * Text color changes

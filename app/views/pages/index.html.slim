@@ -1,3 +1,6 @@
+material_thumbnail.html.slim
+
+
 
 // App Container - everything goes in here.
 .app-container
@@ -57,389 +60,214 @@
       .wrapper.full-height
 
         // Search bar and Create New button
-        .content-row.clear-fix.display-table
-          .content-block
-            .button.button--white data-ui-component="back-to-library"
-              i.fa.fa-arrow-left.fa-fw
-          .content-block.display-table-cell.full-width
-            .content-block__item.height-40px
-              i.breadcrumb-row-icon.fa.fa-home.fa-fw.float-left
-              ol.breadcrumb-row
-                li.breadcrumb-row__item
-                  a.breadcrumb-row__link All
-                li.breadcrumb-row__item
-                  a.breadcrumb-row__link Concrete
-                li.breadcrumb-row__item
-                  a.breadcrumb-row__link Something
-                li.breadcrumb-row__item
-                  a.breadcrumb-row__link Else
-          .content-block
-            .button.button--primary data-ui-component="add-to-project"
+        .content-row.clear-fix
+
+          // Vendor Library Selector
+          .content-block.float-left
+            .content-block__item.width-250px.height-40px.dropdown-button data-ui-component="material-library-selector"
+              i.fa.fa-chevron-down.fa-fw.float-right.dropdown-button__icon
+              h4 Workspace Vendors
+              .dropdown-button__menu-wrapper
+                ul.dropdown-button__menu.width-250px
+                  li.dropdown-button__menu-item
+                    a.dropdown-button__link Workspace Vendors
+                  li.dropdown-button__menu-item
+                    a.dropdown-button__link GIGABASE Vendors
+
+
+
+          .content-block.float-right
+            .button.button--primary data-ui-component="create-new"
               i.fa.fa-plus.fa-fw
-              span Add to Project
-
-
-
-        // Material Brand Logo, Material Name, and Material Brand Name
-        .content-row.clear-fix.display-table
-          // Brand Logo
+              span Create New Vendor
           .content-block
-            .content-block__item.brand-logo-thumbnail.brand-logo-thumbnail--no-logo
-              p.brand-logo-thumbnail__text Click to add a brand logo
-          // Material Name, Material Brand Name
-          .content-block.display-table-cell.full-width
-            .content-block__item
-              h1 Marmoleum Flooring
-              h2 by WoodenFloors Inc.
-
-        // Tags
-        .content-row.clear-fix
-          .content-block
-            .content-block__item
-              .labels
-                h5 Tag 1
-              .labels
-                h5 Tag 2
-              .labels
-                h5 Tag 3
-              .button.button--primary.labels.labels--add-button
-                i.fa.fa-plus.fa-fw
-
-        // Images
-        .content-row.clear-fix
-          .content-block
-            .content-block__item.arrow__wrapper
-              // Left and Right Buttons
-              // hide if there are now enough images to take up the row.
-
-              // left button - don't use fa-fw here
-              .button.arrow__container.arrow__container--left
-                i.fa.fa-angle-left.arrow__arrow__icon
-              // right button - don't use fa-fw here
-              .button.arrow__container.arrow__container--right
-                i.fa.fa-angle-right.arrow__icon
-              // add image button
-              .button.material-images__image.material-images__image--add-image
-                h3 Drag and Drop or click to add an image
-
-        // Material Product Description
-        .content-row.clear-fix
-          .content-block.full-width
-            .content-block__item
-              .wrapper
-                // Content Block Edit Button
-                .button.button--small.button--primary.content-block__edit-button.float-right
-                  i.fa.fa-edit.fa-fw
-                  span Edit
-                // Header
-                h3.content-block__header Product Description
+            .search-bar data-ui-component="search-bar"
+              span.search-bar__icon
+                i.fa.fa-search.fa-fw data-ui-component="search-icon"
+              input.search-bar__text-input placeholder="Search Term(s)"
 
 
-                p Some block of text that is like lorem ipsum but not.
+        ul.list-tabs
+          li.list-tabs__li
+            input.list-tabs__input type="radio" name="tabs" id="tab1" checked="checked"
+            label.list-tabs__label for="tab1" People
+            #tab-content1.list-tabs__content
 
-        // Material Specs
-        .content-row.clear-fix
-          .content-block.full-width
-            .content-block__item
-              .wrapper
-                // Content Block Edit Button
-                .button.button--small.button--primary.content-block__edit-button.float-right
-                  i.fa.fa-edit.fa-fw
-                  span Edit
-                // Header
-                h3.content-block__header Specifications
+              // People List View
+              .content-row
+                .content-block
+                  .content-block__item.list--vendor
+                    // list height determined with calc(100vh - 50px - (40px + 60px)) = (100vh - 150px)
+                    .display-table.list__table
+                      // for Vendor List, there will be 5 columns
+                      // Checkbox, Vendor Name, Company Name, Email, and Phone #
 
-                h5 BASIC INFORMATION
-                .specifications-table
-                  .specifications-table__row
-                    / Must use span for display: inline
-                    span.specifications-table__cell-initial-tab
-                    span.specifications-table__cell-key Product Code
-                    span.specifications-table__cell-value 1099283-IHAAC
-                  .specifications-table__row
-                    span.specifications-table__cell-initial-tab
-                    span.specifications-table__cell-key CSI Category
-                    span.specifications-table__cell-value 1099283-IHAAC
-                  .specifications-table__row
-                    span.specifications-table__cell-initial-tab
-                    span.specifications-table__cell-key Made In
-                    span.specifications-table__cell-value 1099283-IHAAC
-                  .specifications-table__row
-                    span.specifications-table__cell-initial-tab
-                    span.specifications-table__cell-key List Price
-                    span.specifications-table__cell-value 1099283-IHAAC
+                      // Thead
+                      .list__header
+                        .display-tr
+                          .display-table-cell.list__cell.list__checkbox
+                          .display-table-cell.list__cell.table-cell-width-25 Vendor Name
+                          .display-table-cell.list__cell.table-cell-width-25 Company name
+                          .display-table-cell.list__cell.table-cell-width-25 Email
+                          .display-table-cell.list__cell.table-cell-width-20 Phone #
 
-                h5 PHYSICAL PROPERTIES
-                .specifications-table
-                  .specifications-table__row
-                    / Must use span for display: inline
-                    span.specifications-table__cell-initial-tab
-                    span.specifications-table__cell-key Dimensions
-                    span.specifications-table__cell-value 1099283-IHAAC
-                  .specifications-table__row
-                    span.specifications-table__cell-initial-tab
-                    span.specifications-table__cell-key Material Composition
-                    span.specifications-table__cell-value 1099283-IHAAC
-                  .specifications-table__row
-                    span.specifications-table__cell-initial-tab
-                    span.specifications-table__cell-key Colour
-                    span.specifications-table__cell-value 1099283-IHAAC
-                  .specifications-table__row
-                    span.specifications-table__cell-initial-tab
-                    span.specifications-table__cell-key Weight
-                    span.specifications-table__cell-value 1099283-IHAAC
-                  .specifications-table__row
-                    span.specifications-table__cell-initial-tab
-                    span.specifications-table__cell-key Warranty
-                    span.specifications-table__cell-value 1099283-IHAAC
+                      // TBody
+                      .list__body
+                        .display-tr.list__row
+                          .display-table-cell.list__cell.list__checkbox
+                            i.fa.fa-square-o.fa-fw
+                          .display-table-cell.list__cell.list__vendor-name.table-cell-width-25 Nicole Hirao
+                          .display-table-cell.list__cell.table-cell-width-25 Interface Carpets
+                          .display-table-cell.list__cell.table-cell-width-25 nicole@interfacechina.com
+                          .display-table-cell.list__cell.table-cell-width-20 19029188381
+                        .display-tr.list__row
+                          .display-table-cell.list__cell.list__checkbox
+                            i.fa.fa-square-o.fa-fw
+                          .display-table-cell.list__cell.list__vendor-name.table-cell-width-25 Nicole Hirao
+                          .display-table-cell.list__cell.table-cell-width-25 Interface Carpets
+                          .display-table-cell.list__cell.table-cell-width-25 nicole@interfacechina.com
+                          .display-table-cell.list__cell.table-cell-width-20 19029188381
+                        .display-tr.list__row
+                          .display-table-cell.list__cell.list__checkbox
+                            i.fa.fa-square-o.fa-fw
+                          .display-table-cell.list__cell.list__vendor-name.table-cell-width-25 Nicole Hirao
+                          .display-table-cell.list__cell.table-cell-width-25 Interface Carpets
+                          .display-table-cell.list__cell.table-cell-width-25 nicole@interfacechina.com
+                          .display-table-cell.list__cell.table-cell-width-20 19029188381
+                        .display-tr.list__row
+                          .display-table-cell.list__cell.list__checkbox
+                            i.fa.fa-square-o.fa-fw
+                          .display-table-cell.list__cell.list__vendor-name.table-cell-width-25 Nicole Hirao
+                          .display-table-cell.list__cell.table-cell-width-25 Interface Carpets
+                          .display-table-cell.list__cell.table-cell-width-25 nicole@interfacechina.com
+                          .display-table-cell.list__cell.table-cell-width-20 19029188381
+                        .display-tr.list__row
+                          .display-table-cell.list__cell.list__checkbox
+                            i.fa.fa-square-o.fa-fw
+                          .display-table-cell.list__cell.list__vendor-name.table-cell-width-25 Nicole Hirao
+                          .display-table-cell.list__cell.table-cell-width-25 Interface Carpets
+                          .display-table-cell.list__cell.table-cell-width-25 nicole@interfacechina.com
+                          .display-table-cell.list__cell.table-cell-width-20 19029188381
+                        .display-tr.list__row
+                          .display-table-cell.list__cell.list__checkbox
+                            i.fa.fa-square-o.fa-fw
+                          .display-table-cell.list__cell.list__vendor-name.table-cell-width-25 Nicole Hirao
+                          .display-table-cell.list__cell.table-cell-width-25 Interface Carpets
+                          .display-table-cell.list__cell.table-cell-width-25 nicole@interfacechina.com
+                          .display-table-cell.list__cell.table-cell-width-20 19029188381
+                        .display-tr.list__row
+                          .display-table-cell.list__cell.list__checkbox
+                            i.fa.fa-square-o.fa-fw
+                          .display-table-cell.list__cell.list__vendor-name.table-cell-width-25 Nicole Hirao
+                          .display-table-cell.list__cell.table-cell-width-25 Interface Carpets
+                          .display-table-cell.list__cell.table-cell-width-25 nicole@interfacechina.com
+                          .display-table-cell.list__cell.table-cell-width-20 19029188381
+                        .display-tr.list__row
+                          .display-table-cell.list__cell.list__checkbox
+                            i.fa.fa-square-o.fa-fw
+                          .display-table-cell.list__cell.list__vendor-name.table-cell-width-25 Nicole Hirao
+                          .display-table-cell.list__cell.table-cell-width-25 Interface Carpets
+                          .display-table-cell.list__cell.table-cell-width-25 nicole@interfacechina.com
+                          .display-table-cell.list__cell.table-cell-width-20 19029188381
+                        .display-tr.list__row
+                          .display-table-cell.list__cell.list__checkbox
+                            i.fa.fa-square-o.fa-fw
+                          .display-table-cell.list__cell.list__vendor-name.table-cell-width-25 Nicole Hirao
+                          .display-table-cell.list__cell.table-cell-width-25 Interface Carpets
+                          .display-table-cell.list__cell.table-cell-width-25 nicole@interfacechina.com
+                          .display-table-cell.list__cell.table-cell-width-20 19029188381
+                        .display-tr.list__row
+                          .display-table-cell.list__cell.list__checkbox
+                            i.fa.fa-square-o.fa-fw
+                          .display-table-cell.list__cell.list__vendor-name.table-cell-width-25 Nicole Hirao
+                          .display-table-cell.list__cell.table-cell-width-25 Interface Carpets
+                          .display-table-cell.list__cell.table-cell-width-25 nicole@interfacechina.com
+                          .display-table-cell.list__cell.table-cell-width-20 19029188381
+                        .display-tr.list__row
+                          .display-table-cell.list__cell.list__checkbox
+                            i.fa.fa-square-o.fa-fw
+                          .display-table-cell.list__cell.list__vendor-name.table-cell-width-25 Nicole Hirao
+                          .display-table-cell.list__cell.table-cell-width-25 Interface Carpets
+                          .display-table-cell.list__cell.table-cell-width-25 nicole@interfacechina.com
+                          .display-table-cell.list__cell.table-cell-width-20 19029188381
+                        .display-tr.list__row
+                          .display-table-cell.list__cell.list__checkbox
+                            i.fa.fa-square-o.fa-fw
+                          .display-table-cell.list__cell.list__vendor-name.table-cell-width-25 Nicole Hirao
+                          .display-table-cell.list__cell.table-cell-width-25 Interface Carpets
+                          .display-table-cell.list__cell.table-cell-width-25 nicole@interfacechina.com
+                          .display-table-cell.list__cell.table-cell-width-20 19029188381
+                        .display-tr.list__row
+                          .display-table-cell.list__cell.list__checkbox
+                            i.fa.fa-square-o.fa-fw
+                          .display-table-cell.list__cell.list__vendor-name.table-cell-width-25 Nicole Hirao
+                          .display-table-cell.list__cell.table-cell-width-25 Interface Carpets
+                          .display-table-cell.list__cell.table-cell-width-25 nicole@interfacechina.com
+                          .display-table-cell.list__cell.table-cell-width-20 19029188381
+                        .display-tr.list__row
+                          .display-table-cell.list__cell.list__checkbox
+                            i.fa.fa-square-o.fa-fw
+                          .display-table-cell.list__cell.list__vendor-name.table-cell-width-25 Nicole Hirao
+                          .display-table-cell.list__cell.table-cell-width-25 Interface Carpets
+                          .display-table-cell.list__cell.table-cell-width-25 nicole@interfacechina.com
+                          .display-table-cell.list__cell.table-cell-width-20 19029188381
+                        .display-tr.list__row
+                          .display-table-cell.list__cell.list__checkbox
+                            i.fa.fa-square-o.fa-fw
+                          .display-table-cell.list__cell.list__vendor-name.table-cell-width-25 Nicole Hirao
+                          .display-table-cell.list__cell.table-cell-width-25 Interface Carpets
+                          .display-table-cell.list__cell.table-cell-width-25 nicole@interfacechina.com
+                          .display-table-cell.list__cell.table-cell-width-20 19029188381
+                        .display-tr.list__row
+                          .display-table-cell.list__cell.list__checkbox
+                            i.fa.fa-square-o.fa-fw
+                          .display-table-cell.list__cell.list__vendor-name.table-cell-width-25 Nicole Hirao
+                          .display-table-cell.list__cell.table-cell-width-25 Interface Carpets
+                          .display-table-cell.list__cell.table-cell-width-25 nicole@interfacechina.com
+                          .display-table-cell.list__cell.table-cell-width-20 19029188381
+                        .display-tr.list__row
+                          .display-table-cell.list__cell.list__checkbox
+                            i.fa.fa-square-o.fa-fw
+                          .display-table-cell.list__cell.list__vendor-name.table-cell-width-25 Nicole Hirao
+                          .display-table-cell.list__cell.table-cell-width-25 Interface Carpets
+                          .display-table-cell.list__cell.table-cell-width-25 nicole@interfacechina.com
+                          .display-table-cell.list__cell.table-cell-width-20 19029188381
+                        .display-tr.list__row
+                          .display-table-cell.list__cell.list__checkbox
+                            i.fa.fa-square-o.fa-fw
+                          .display-table-cell.list__cell.list__vendor-name.table-cell-width-25 Nicole Hirao
+                          .display-table-cell.list__cell.table-cell-width-25 Interface Carpets
+                          .display-table-cell.list__cell.table-cell-width-25 nicole@interfacechina.com
+                          .display-table-cell.list__cell.table-cell-width-20 19029188381
 
-                h5 PERFORMANCE
-                .specifications-table
-                  .specifications-table__row
-                    / Must use span for display: inline
-                    span.specifications-table__cell-initial-tab
-                    span.specifications-table__cell-key Flammability Rating
-                    span.specifications-table__cell-value something
-                  .specifications-table__row
-                    span.specifications-table__cell-initial-tab
-                    span.specifications-table__cell-key Porosity
-                    span.specifications-table__cell-value something
-                  .specifications-table__row
-                    span.specifications-table__cell-initial-tab
-                    span.specifications-table__cell-key Chemical Resistance
-                    span.specifications-table__cell-value something
-                  .specifications-table__row
-                    span.specifications-table__cell-initial-tab
-                    span.specifications-table__cell-key VOC Emissions
-                    span.specifications-table__cell-value something
+          li.list-tabs__li
+            input.list-tabs__input type="radio" name="tabs" id="tab2"
+            label.list-tabs__label for="tab2" Company
+            #tab-content2.list-tabs__content
+              // People List View
+              .content-row
+                .content-block
+                  .content-block__item.list--vendor
+                    // list height determined with calc(100vh - 50px - (40px + 60px + (30px for the tabs) ))= (100vh - 180px)
+                    .display-table.list__table
+                      // for Vendor List, there will be 5 columns
+                      // Checkbox, Vendor Name, Company Name, Email, and Phone #
 
-        // Material Specs EDIT MODE
-        .content-row.clear-fix
-          .content-block.full-width
-            // Activate Specifications EDIT MODE here
-            .content-block__item.specifications--edit-mode
-              .wrapper
-                // Content Block Edit Button - HIDE WHEN IN EDIT MODE
-                .button.button--small.button--primary.content-block__edit-button.float-right
-                  i.fa.fa-edit.fa-fw
-                  span Edit
-                // Header
-                h3.content-block__header Edit Specifications
+                      // Thead
+                      .list__header
+                        .display-tr
+                          .display-table-cell.list__cell.list__checkbox
+                          .display-table-cell.list__cell.table-cell-width-25 Company Name
+                          .display-table-cell.list__cell.table-cell-width-25 Location
+                          .display-table-cell.list__cell.table-cell-width-25
+                          .display-table-cell.list__cell.table-cell-width-20
 
-                h5 BASIC INFORMATION
-                .specifications-table
-                  .specifications-table__row
-                    / Must use span for display: inline
-                    span.specifications-table__cell-initial-tab
-                    span.specifications-table__cell-key Product Code
-                    span.specifications-table__cell-value 1099283-IHAAC
-                  .specifications-table__row
-                    span.specifications-table__cell-initial-tab
-                    span.specifications-table__cell-key CSI Category
-                    span.specifications-table__cell-value 1099283-IHAAC
-                  .specifications-table__row
-                    span.specifications-table__cell-initial-tab
-                    span.specifications-table__cell-key Made In
-                    span.specifications-table__cell-value 1099283-IHAAC
-                  .specifications-table__row
-                    span.specifications-table__cell-initial-tab
-                    span.specifications-table__cell-key List Price
-                    span.specifications-table__cell-value 1099283-IHAAC
-                  .specifications-table__row
-                    span.specifications-table__cell-initial-tab
-                    span.specifications-table__cell-add-row Click to Add more Information
-                    span.specifications-table__cell-value
-
-                h5 PHYSICAL PROPERTIES
-                .specifications-table
-                  .specifications-table__row
-                    / Must use span for display: inline
-                    span.specifications-table__cell-initial-tab
-                    span.specifications-table__cell-key Dimensions
-                    span.specifications-table__cell-value 1099283-IHAAC
-                  .specifications-table__row
-                    span.specifications-table__cell-initial-tab
-                    span.specifications-table__cell-key Material Composition
-                    span.specifications-table__cell-value 1099283-IHAAC
-                  .specifications-table__row
-                    span.specifications-table__cell-initial-tab
-                    span.specifications-table__cell-key Colour
-                    span.specifications-table__cell-value 1099283-IHAAC
-                  .specifications-table__row
-                    span.specifications-table__cell-initial-tab
-                    span.specifications-table__cell-key Weight
-                    span.specifications-table__cell-value 1099283-IHAAC
-                  .specifications-table__row
-                    span.specifications-table__cell-initial-tab
-                    span.specifications-table__cell-key Warranty
-                    span.specifications-table__cell-value 1099283-IHAA
-                  .specifications-table__row
-                    span.specifications-table__cell-initial-tab
-                    span.specifications-table__cell-add-row Click to Add more Information
-                    span.specifications-table__cell-value
-
-                h5 PERFORMANCE
-                .specifications-table
-                  .specifications-table__row
-                    / Must use span for display: inline
-                    span.specifications-table__cell-initial-tab
-                    span.specifications-table__cell-key.text-black Flammability Rating
-                    span.specifications-table__cell-value.text-black-secondary Add Flamibility Rating
-                  .specifications-table__row
-                    span.specifications-table__cell-initial-tab
-                    span.specifications-table__cell-key Porosity
-                    input.specifications-table__cell-value
-                  .specifications-table__row
-                    span.specifications-table__cell-initial-tab
-                    span.specifications-table__cell-key Chemical Resistance
-                    span.specifications-table__cell-value
-                  .specifications-table__row
-                    span.specifications-table__cell-initial-tab
-                    span.specifications-table__cell-key VOC Emissions
-                    span.specifications-table__cell-value
-                  .specifications-table__row
-                    span.specifications-table__cell-initial-tab
-                    span.specifications-table__cell-add-row Click to Add more Information
-                    span.specifications-table__cell-value
-
-                .save-and-cancel.float-right
-                  a.save-and-cancel__link SAVE
-                  a.save-and-cancel__link CANCEL
-
-
-        // Projects this material is used in (Show only when it's being used)
-        // NO EDIT BUTTON
-        .content-row.clear-fix
-          .content-block.full-width
-            .content-block__item
-              .wrapper
-                // Header
-                h3.content-block__header Projects this Material is Used In
-                div
-                  a Vidal Sasson Academy at Red Town
-                div
-                  a URBN Hotel
-                div
-                  a Suzhou Summit
-
-        // Material Certifications
-        .content-row.clear-fix
-          .content-block.full-width
-            .content-block__item
-              .wrapper
-                // Content Block Edit Button - HIDE WHEN IN EDIT MODE
-                .button.button--small.button--primary.content-block__edit-button.float-right
-                  i.fa.fa-edit.fa-fw
-                  span Edit
-                .button.button--small.button--primary.content-block__edit-button.float-right
-                  i.fa.fa-plus.fa-fw
-                  span Add
-                // Header
-                h3.content-block__header Material Certifications
-                p This product currently has no Material Certifications.
-
-        // Technical Documents
-        .content-row.clear-fix
-          .content-block.full-width
-            .content-block__item
-              .wrapper
-                // Content Block Button(s) - HIDE WHEN IN EDIT MODE
-                // EDIT BUTTON
-                .button.button--small.button--primary.content-block__edit-button.float-right
-                  i.fa.fa-edit.fa-fw
-                  span Edit
-                // ADD BUTTON
-                .button.button--small.button--primary.content-block__edit-button.float-right
-                  i.fa.fa-plus.fa-fw
-                  span Add
-                // Header
-                h3.content-block__header Technical Documents
-                p There are currently no technical documents.
-
-        // Vendors
-        .content-row.clear-fix
-          .content-block.full-width
-            .content-block__item.arrow__wrapper
-              // left button - don't use fa-fw here
-              .button.arrow__container.arrow__container--left
-                i.fa.fa-angle-left.arrow__arrow__icon
-              // right button - don't use fa-fw here
-              .button.arrow__container.arrow__container--right
-                i.fa.fa-angle-right.arrow__icon
-              // add image button
-              .wrapper
-                // Content Block Edit Button - HIDE WHEN IN EDIT MODE
-                .button.button--small.button--primary.content-block__button.float-right
-                  i.fa.fa-edit.fa-fw
-                  span Edit
-                .button.button--small.button--primary.content-block__button.float-right
-                  i.fa.fa-plus.fa-fw
-                  span Add
-                // Header
-                h3.content-block__header Vendors
-
-                .wrapper
-                  .contact-card
-                    // NOTE: Show the Remove button only in Edit Mode
-                    .button.button--small.button--primary.content-block__button.float-right
-                      i.fa.fa-trash.fa-fw
-                      span Remove
-                    .contact-card__company-name GDK Metals
-                    .contact-card__person-title Regional Sales Manager
-                    .contact-card__person-name Irene Fung
-                    .contact-card__person-email irenefung@gdkchina.com
-                    .contact-card__person-phone 15221200352
-                    .contact-card__company-address 1200 West Nanjing Road, Building A, #1901
-                    .contact-card__company-address-2 Shanghai, Jingan District 200090
-                  .contact-card
-                    // NOTE: Show the Remove button only in Edit Mode
-                    .button.button--small.button--primary.content-block__button.float-right
-                      i.fa.fa-trash.fa-fw
-                      span Remove
-                    .contact-card__company-name.text-disabled No Company Info
-                    .contact-card__person-title.text-disabled No Title Info
-                    .contact-card__person-name No Name Provided
-                    .contact-card__person-email.text-disabled No Email Info
-                    .contact-card__person-phone.text-disabled No Phone Info
-                    .contact-card__company-address.text-disabled No address Info
-                    .contact-card__company-address-2.text-disabled
-
-        // Reviews
-        .content-row.clear-fix
-          .content-block.full-width
-            .content-block__item
-              .wrapper
-                // Header
-                h3.content-block__header Reviews
-                .comment-card.comment-card--create
-                  .comment-card__avatar
-                    .user__pic
-                  .comment-card__comment
-                    .comment-card__stars
-                      span Rate the Material:
-                      i.fa.fa-star-o.fa-fw
-                      i.fa.fa-star-o.fa-fw
-                      i.fa.fa-star-o.fa-fw
-                      i.fa.fa-star-o.fa-fw
-                      i.fa.fa-star-o.fa-fw
-                    .comment-card__text contentEditable="true"
-                    .button.button--small.button--primary.comment-card__submit-button.float-right Submit
-                .comment-card
-                  .comment-card__avatar
-                    .user__pic.float-left
-                  .comment-card__comment
-                    .comment-card__name Stanton Wong
-                    .comment-card__stars
-                      i.fa.fa-star-o.fa-fw
-                      i.fa.fa-star-o.fa-fw
-                      i.fa.fa-star-o.fa-fw
-                      i.fa.fa-star-o.fa-fw
-                      i.fa.fa-star-o.fa-fw
-                    .comment-card__text Something that I wrote. Testing Testing.
-                    // Show minutes ago, hours ago, days ago (up to 2 days), then Date
-                    .comment-card__info
-                      // Show Edit and Delete if it's your own post.
-                      a Edit
-                      a Delete
-                      span March 12th, 2015
-
+                      // TBody
+                      .list__body
+                        .display-tr.list__row
+                          .display-table-cell.list__cell.list__checkbox
+                            i.fa.fa-square-o.fa-fw
+                          .display-table-cell.list__cell.list__vendor-name.table-cell-width-25 Gensler
+                          .display-table-cell.list__cell.table-cell-width-25 Shanghai, China
+                          .display-table-cell.list__cell.table-cell-width-25
+                          .display-table-cell.list__cell.table-cell-width-20

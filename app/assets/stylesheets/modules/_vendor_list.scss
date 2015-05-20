@@ -1,0 +1,133 @@
+/*
+ * Vendor List
+ *
+ * Specifically targeting the list
+ */
+
+/*
+ * height specifically for Vendor List
+ * used when there is only one 40px content-row above
+ */
+.list--vendor {
+  height: calc( 100vh - 180px );
+  overflow: hidden; /* important for fixed header hack */
+}
+
+.list__table {
+  height: 100%;
+  width: 100%;
+}
+
+
+
+/*
+ * used in all lists
+ */
+
+/* fixed header */
+.list__header {
+  display: block;
+  height: 25px;
+
+  /* below is a hack to make sure the header is aligned while hiding scroll */
+  overflow-y: scroll;
+  margin-right: -50px;
+  padding-right: 50px;
+  color: $color-black-secondary;
+  font-weight: 500;
+
+}
+
+/* use with fixed header */
+.list__body {
+  display: block;
+  overflow: auto;
+  height: calc( 100% - 30px );
+  color: $color-black-secondary;
+}
+
+.list__row {
+  height: 25px;
+  vertical-align: middle;
+
+  &:nth-child(odd) {
+    background-color: #ddd;
+  }
+}
+
+/* required because current display-table-cell has vertical-align: top */
+.list__cell {
+  vertical-align: middle;
+}
+
+.list__checkbox {
+  width: 72px;
+  text-align: center;
+}
+
+.list__vendor-name {
+  color: $color-accent;
+  font-weight: 400;
+}
+
+
+
+/*
+ * List Tabs
+ *
+ * Usage:
+ *
+ */
+.list-tabs {
+  position: relative;
+}
+
+//The Magic
+.list-tabs__input[id^="tab"]:checked ~ .list-tabs__content[id^="tab-content"] {
+  display: block;
+}
+
+.list-tabs__li {
+  float: left;
+  display: block;
+}
+
+/* use only labels, throw the radio buttons to the very corner of the Earth */
+input.list-tabs__input[type="radio"] {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+/* Change look of selected tab. Remember to set  */
+.list-tabs__input[id^="tab"]:checked + label {
+  top: 0;
+  padding-top: 10px;
+  background: $white-background-90;
+}
+
+label.list-tabs__label {
+  position: relative;
+  top: 4px; /* shifts the smaller tab down 4px */
+  display: block;
+  padding: 6px 21px;
+  border-radius: 5px 5px 0 0;
+  background: darken($color-white-secondary, 10);
+  font-size: $h5-size;
+  font-weight: normal;
+  cursor: pointer;
+  &:hover {
+    background: $color-white-secondary;
+  }
+}
+
+/* content is hidden until the tab is checked */
+.list-tabs__content{
+  z-index: $zIndex-2-list-tab-top;
+  display: none;
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  top: 26px;
+  left: 0;
+}
