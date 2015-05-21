@@ -17,13 +17,45 @@ material_thumbnail.html.slim
       i.fa.fa-bell.fa-fw
 
   // Permanent Left Navigation Bar
-  .site-nav.full-height data-ui-component="navigation-bar"
-    .site-nav__link data-ui-component="dashboard-link"
-      .site-nav__wrapper
-        .site-nav__icon
-          i.fa.fa-dashboard.fa-fw.fa-2x
-        .site-nav__name Dash board
-    .site-nav__link data-ui-component="projects-link"
+  / .site-nav.full-height data-ui-component="navigation-bar"
+  /   .site-nav__link data-ui-component="dashboard-link"
+  /     .site-nav__wrapper
+  /       .site-nav__icon
+  /         i.fa.fa-dashboard.fa-fw.fa-2x
+  /       .site-nav__name Dash board
+  /   .site-nav__link data-ui-component="projects-link"
+  /     .site-nav__wrapper
+  /       .site-nav__icon
+  /         i.fa.fa-building.fa-fw.fa-2x
+  /       .site-nav__name Projects
+  /   .site-nav__link data-ui-component="materials-library-link"
+  /     .site-nav__wrapper
+  /       .site-nav__icon
+  /         i.fa.fa-cubes.fa-fw.fa-2x
+  /       .site-nav__name Materials Library
+  /   .site-nav__link data-ui-component="vendors-library-link"
+  /     .site-nav__wrapper
+  /       .site-nav__icon
+  /         i.fa.fa-tty.fa-fw.fa-2x
+  /       .site-nav__name Vendors Library
+  /   .site-nav__link data-ui-component="standards-link"
+  /     .site-nav__wrapper
+  /       .site-nav__icon
+  /         i.fa.fa-book.fa-fw.fa-2x
+  /       .site-nav__name Standards
+  /   .site-nav__link data-ui-component="files-library-link"
+  /     .site-nav__wrapper
+  /       .site-nav__icon
+  /         i.fa.fa-file-text.fa-fw.fa-2x
+  /       .site-nav__name Files Library
+  /   .site-nav__link data-ui-component="settings-link"
+  /     .site-nav__wrapper
+  /       .site-nav__icon
+  /         i.fa.fa-cogs.fa-fw.fa-2x
+  /       .site-nav__name Settings
+
+  .site-nav.site-nav--light-bg.full-height data-ui-component="navigation-bar"
+    .site-nav__link.site-nav--dark-bg data-ui-component="projects-link"
       .site-nav__wrapper
         .site-nav__icon
           i.fa.fa-building.fa-fw.fa-2x
@@ -31,29 +63,33 @@ material_thumbnail.html.slim
     .site-nav__link data-ui-component="materials-library-link"
       .site-nav__wrapper
         .site-nav__icon
+          i.fa.fa-dashboard.fa-fw.fa-2x
+        .site-nav__name Overview
+    .site-nav__link data-ui-component="materials-library-link"
+      .site-nav__wrapper
+        .site-nav__icon
+          i.fa.fa-table.fa-fw.fa-2x
+        .site-nav__name Sheets
+    .site-nav__link data-ui-component="materials-library-link"
+      .site-nav__wrapper
+        .site-nav__icon
+          i.fa.fa-connectdevelop.fa-fw.fa-2x
+        .site-nav__name Spaces
+    .site-nav__link data-ui-component="materials-library-link"
+      .site-nav__wrapper
+        .site-nav__icon
           i.fa.fa-cubes.fa-fw.fa-2x
-        .site-nav__name Materials Library
+        .site-nav__name Materials
     .site-nav__link data-ui-component="vendors-library-link"
       .site-nav__wrapper
         .site-nav__icon
           i.fa.fa-tty.fa-fw.fa-2x
-        .site-nav__name Vendors Library
+        .site-nav__name Vendors
     .site-nav__link data-ui-component="standards-link"
       .site-nav__wrapper
         .site-nav__icon
           i.fa.fa-book.fa-fw.fa-2x
         .site-nav__name Standards
-    .site-nav__link data-ui-component="files-library-link"
-      .site-nav__wrapper
-        .site-nav__icon
-          i.fa.fa-file-text.fa-fw.fa-2x
-        .site-nav__name Files Library
-    .site-nav__link data-ui-component="settings-link"
-      .site-nav__wrapper
-        .site-nav__icon
-          i.fa.fa-cogs.fa-fw.fa-2x
-        .site-nav__name Settings
-
 
   .app-body.full-height
     .app-body__content.full-height data-ui-component="main-content"

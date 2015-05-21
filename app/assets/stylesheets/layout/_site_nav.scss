@@ -13,6 +13,14 @@
   color: #888;
 }
 
+.site-nav--light-bg {
+  background-color: $color-grey-light;
+}
+
+.site-nav--dark-bg {
+  background-color: #333;
+}
+
 /* This is an link item */
 .site-nav__link {
   min-height: 50px;
